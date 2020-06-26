@@ -5,9 +5,9 @@
 void won(RenderWindow &window) 
 {
     Texture bg3Texture, buttonRepeatTexture, buttonExitTexture;
-    bg3Texture.loadFromFile("images/fon3.png");
-    buttonRepeatTexture.loadFromFile("images/buttonRepeat.png");
-    buttonExitTexture.loadFromFile("images/buttonexit.png");
+    bg3Texture.loadFromFile("../images/fon3.png");
+    buttonRepeatTexture.loadFromFile("../images/buttonRepeat.png");
+    buttonExitTexture.loadFromFile("../images/buttonexit.png");
     
     Sprite bg3Sprite(bg3Texture), buttonRepeatSprite(buttonRepeatTexture);
     Sprite buttonExitSprite(buttonExitTexture);

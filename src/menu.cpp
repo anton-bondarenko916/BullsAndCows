@@ -1,6 +1,4 @@
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
+#include "functions.h"
 
 using namespace sf;
 
@@ -12,9 +10,9 @@ void menu()
     int position = 0;
     
     Texture bgTexture, buttonPlay, buttonExit;
-    bgTexture.loadFromFile("images/fon.jpg");
-    buttonPlay.loadFromFile("images/buttonplay.png");
-    buttonExit.loadFromFile("images/buttonexit.png");
+    bgTexture.loadFromFile("../images/fon.jpg");
+    buttonPlay.loadFromFile(" ../images/buttonplay.png");
+    buttonExit.loadFromFile("../images/buttonexit.png");
 
     Sprite bgSprite(bgTexture), buttonPlaySprite(buttonPlay),
     buttonExitSprite(buttonExit);

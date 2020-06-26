@@ -10,9 +10,9 @@ void gameMenu(RenderWindow &window)
     
 
     Texture buttonOk, buttonExitTexture, bgTexture;
-    bgTexture.loadFromFile("images/fon2.png");
-    buttonOk.loadFromFile("images/okButton.png");
-    buttonExitTexture.loadFromFile("images/buttonexit.png");
+    bgTexture.loadFromFile("../images/fon2.png");
+    buttonOk.loadFromFile("../images/okButton.png");
+    buttonExitTexture.loadFromFile("../images/buttonexit.png");
 
     Sprite bgSprite(bgTexture), buttonOkSprite(buttonOk);
     Sprite buttonExitSprite(buttonExitTexture);
@@ -21,7 +21,7 @@ void gameMenu(RenderWindow &window)
     buttonExitSprite.setPosition(875, 425);
     
     Font arial;
-    arial.loadFromFile("fonts/arial.ttf");
+    arial.loadFromFile("../fonts/arial.ttf");
     
     Text text("", arial, 48), text1("Number of moves: ", arial, 25);
     Text enterText("Enter 4-digit number:", arial, 25);
