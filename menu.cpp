@@ -38,7 +38,7 @@ void menu()
         }
         if (Mouse::isButtonPressed(Mouse::Left)) {
             if (position == 1) {
-                //gameMenu(window);
+                gameMenu(window);
             }
             if (position == 2)
                 window.close();
