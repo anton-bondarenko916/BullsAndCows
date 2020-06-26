@@ -1,9 +1,11 @@
-#include <iostream>
+#include "functions.h"
 
 using namespace std;
+using namespace sf;
 
-int main()
-{
- cout << "Hello World" << endl;
-            return 0;
+
+int main() 
+{   
+    menu();
+    return 0;
 }
