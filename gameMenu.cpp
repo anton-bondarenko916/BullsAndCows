@@ -21,7 +21,7 @@ void gameMenu(RenderWindow &window)
     buttonExitSprite.setPosition(875, 425);
     
     Font arial;
-    arial.loadFromFile("arial.ttf");
+    arial.loadFromFile("fonts/arial.ttf");
     
     Text text("", arial, 48), text1("Number of moves: ", arial, 25);
     Text enterText("Enter 4-digit number:", arial, 25);
