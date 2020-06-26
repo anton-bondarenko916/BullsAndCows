@@ -92,7 +92,7 @@ void gameMenu(RenderWindow &window)
                 input1.enteringNumber(event); 
             }
             if (event.type == Event::MouseButtonReleased) {
-                if (event.key.code == Mouse::Left) {
+                if (event.mouseButton.button == Mouse::Left) {
                     if (IntRect(620, 43, 53, 53).contains(Mouse::getPosition(window))) {
                         result = 0;
                         input1.outputText(enter);
