@@ -7,7 +7,7 @@
 #include <string>
 #include <random>
 #include <ctime>
-
+#include "input.h"
 
 using namespace std;
 using namespace sf;
@@ -18,3 +18,4 @@ int create();
 int toInt(string a);
 void menu();
 void gameMenu(RenderWindow &window);
+void won(RenderWindow &window);
