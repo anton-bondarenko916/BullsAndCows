@@ -11,7 +11,7 @@ void menu()
     
     Texture bgTexture, buttonPlay, buttonExit;
     bgTexture.loadFromFile("../images/fon.jpg");
-    buttonPlay.loadFromFile(" ../images/buttonplay.png");
+    buttonPlay.loadFromFile("../images/buttonplay.png");
     buttonExit.loadFromFile("../images/buttonexit.png");
 
     Sprite bgSprite(bgTexture), buttonPlaySprite(buttonPlay),
