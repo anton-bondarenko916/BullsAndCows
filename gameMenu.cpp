@@ -61,9 +61,10 @@ void gameMenu(RenderWindow &window)
     text.setStyle(Text::Bold);
     text.setPosition(500, 200);
     
-    Textbox textbox1(24, Color::Black, true);
-    textbox1.setFont(arial);
-    textbox1.setPosition({510, 55});
+    Input input1(24, Color::Black);
+    input1.setFont(arial);
+    input1.setPosition({510, 55});
+    
     
     randomNumber = create();
     
@@ -88,13 +89,13 @@ void gameMenu(RenderWindow &window)
                 window.close();
             }
             if (event.type == Event::TextEntered) {
-                textbox1.typedOn(event); 
+                input1.enteringNumber(event); 
             }
             if (event.type == Event::MouseButtonReleased) {
-                if (event.MouseLeft == Mouse::Left) {
+                if (event.key.code == Mouse::Left) {
                     if (IntRect(620, 43, 53, 53).contains(Mouse::getPosition(window))) {
                         result = 0;
-                        textbox1.Print(enter);
+                        input1.outputText(enter);
                         text.setString(enter);          
                         number = toInt(enter);
                         result = logic(number, randomNumber, bulls, cows, numOfMoves);
@@ -135,7 +136,7 @@ void gameMenu(RenderWindow &window)
             window.draw(numberOfBullsText);
             window.draw(numberOfCowsText);
             window.draw(buttonExitSprite);
-            textbox1.drawTo(window);
+            input1.output(window);
             window.display();
         }
   }
