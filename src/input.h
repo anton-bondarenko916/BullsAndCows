@@ -10,7 +10,7 @@ class Input {
 
 public:
   Input(int size, Color color) {
-	  input1.setCharacterSize(size);
+    input1.setCharacterSize(size);
 	  input1.setFillColor(color);
 	  input1.setString("_");
   }

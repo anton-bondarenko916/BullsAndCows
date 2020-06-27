@@ -76,58 +76,58 @@ void gameMenu(RenderWindow &window) {
     }
     
     Event event;
-      while (window.pollEvent(event)) {
-        if (event.type == Event::Closed) {
-          window.close();
-        }
-        if (event.type == Event::TextEntered) {
-          input1.enteringNumber(event); 
-        }
-        if (event.type == Event::MouseButtonReleased) {
-          if (event.mouseButton.button == Mouse::Left) {
-            if (IntRect(620, 43, 53, 53).contains(Mouse::getPosition(window))) {
-              result = 0;
-              input1.outputText(enter);
-              text.setString(enter);          
-              number = toInt(enter);
-              result = logic(number, randomNumber, bulls, cows, numOfMoves);
-              switch (result) {
-              case 0:
-                text.setString(enter);
-                break;
-              case 1:
-                text.setString("*error*");
-                break; 
-              case 2:
-                won(window);
-                break;
-              }
-              bullsString = to_string(bulls);
-              numberOfBullsText.setString(bullsString);
-              cowsString = to_string(cows);
-              numberOfCowsText.setString(cowsString);
-              text1.setString("Number of moves: " + to_string(numOfMoves));          
-            } 
-            if (IntRect(875, 425, 130, 47).contains(Mouse::getPosition(window))) {
-              window.close();
-            } 
+    while (window.pollEvent(event)) {
+      if (event.type == Event::Closed) {
+        window.close();
+      }
+      if (event.type == Event::TextEntered) {
+        input1.enteringNumber(event); 
+      }
+      if (event.type == Event::MouseButtonReleased) {
+        if (event.mouseButton.button == Mouse::Left) {
+          if (IntRect(620, 43, 53, 53).contains(Mouse::getPosition(window))) {
+            result = 0;
+            input1.outputText(enter);
+            text.setString(enter);          
+            number = toInt(enter);
+            result = logic(number, randomNumber, bulls, cows, numOfMoves);
+            switch (result) {
+            case 0:
+              text.setString(enter);
+              break;
+            case 1:
+              text.setString("*error*");
+              break; 
+            case 2:
+              won(window);
+              break;
+            }
+            bullsString = to_string(bulls);
+            numberOfBullsText.setString(bullsString);
+            cowsString = to_string(cows);
+            numberOfCowsText.setString(cowsString);
+            text1.setString("Number of moves: " + to_string(numOfMoves));          
           } 
-        }
+          if (IntRect(875, 425, 130, 47).contains(Mouse::getPosition(window))) {
+            window.close();
+          } 
+        } 
+      }
     
-        window.clear();
-        window.draw(bgSprite);
-        window.draw(buttonOkSprite);
-        window.draw(text);
-        window.draw(text1);
-        window.draw(enterText);
-        window.draw(bullsText);
-        window.draw(cowsText);
-        window.draw(enteredText);
-        window.draw(numberOfBullsText);
-        window.draw(numberOfCowsText);
-        window.draw(buttonExitSprite);
-        input1.output(window);
-        window.display();
+      window.clear();
+      window.draw(bgSprite);
+      window.draw(buttonOkSprite);
+      window.draw(text);
+      window.draw(text1);
+      window.draw(enterText);
+      window.draw(bullsText);
+      window.draw(cowsText);
+      window.draw(enteredText);
+      window.draw(numberOfBullsText);
+      window.draw(numberOfCowsText);
+      window.draw(buttonExitSprite);
+      input1.output(window);
+      window.display();
     }
   }
 }
