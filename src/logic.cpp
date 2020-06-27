@@ -48,6 +48,6 @@ int logic(int number, int randomNumber, int &bulls, int &cows, int &numOfMoves) 
 			return 2;
 		} else {
 			return 0;
-			} 
-    }   
+			}
+    }
 }
