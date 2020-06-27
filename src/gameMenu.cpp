@@ -15,7 +15,7 @@ void gameMenu(RenderWindow &window) {
   Sprite bgSprite(bgTexture), buttonOkSprite(buttonOk);
   Sprite buttonExitSprite(buttonExitTexture);
   bgSprite.setPosition(0, 0);
-  buttonOkSprite.setPosition(620,43);
+  buttonOkSprite.setPosition(620, 43);
   buttonExitSprite.setPosition(875, 425);
     
   Font arial;

@@ -1,13 +1,13 @@
+#include "input.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
+#include <ctime>
 #include <iostream>
+#include <random>
 #include <sstream>
 #include <stdlib.h>
 #include <string>
-#include <random>
-#include <ctime>
-#include "input.h"
 
 using namespace std;
 using namespace sf;
