@@ -1,4 +1,4 @@
-#include "src/functions.h"
+#include "../src/functions.h"
 #include <gtest/gtest.h>
 
 using namespace std;
