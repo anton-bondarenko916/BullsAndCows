@@ -107,7 +107,7 @@ void gameMenu(RenderWindow &window) {
             cowsString = to_string(cows);
             numberOfCowsText.setString(cowsString);
             text1.setString("Number of moves: " + to_string(numOfMoves));
-          } 
+          }
           if (IntRect(875, 425, 130, 47).contains(Mouse::getPosition(window))) {
             window.close();
           }
