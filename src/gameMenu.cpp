@@ -61,7 +61,7 @@ void gameMenu(RenderWindow &window) {
   
   Input input1(24, Color::Black);
   input1.setFont(arial);
-  input1.setPosition({510, 55});  
+  input1.setPosition({510, 55});
     
   randomNumber = create();
   
@@ -81,14 +81,14 @@ void gameMenu(RenderWindow &window) {
         window.close();
       }
       if (event.type == Event::TextEntered) {
-        input1.enteringNumber(event); 
+        input1.enteringNumber(event);
       }
       if (event.type == Event::MouseButtonReleased) {
         if (event.mouseButton.button == Mouse::Left) {
           if (IntRect(620, 43, 53, 53).contains(Mouse::getPosition(window))) {
             result = 0;
             input1.outputText(enter);
-            text.setString(enter);          
+            text.setString(enter);
             number = toInt(enter);
             result = logic(number, randomNumber, bulls, cows, numOfMoves);
             switch (result) {
@@ -97,7 +97,7 @@ void gameMenu(RenderWindow &window) {
               break;
             case 1:
               text.setString("*error*");
-              break; 
+              break;
             case 2:
               won(window);
               break;
@@ -106,12 +106,12 @@ void gameMenu(RenderWindow &window) {
             numberOfBullsText.setString(bullsString);
             cowsString = to_string(cows);
             numberOfCowsText.setString(cowsString);
-            text1.setString("Number of moves: " + to_string(numOfMoves));          
+            text1.setString("Number of moves: " + to_string(numOfMoves));
           } 
           if (IntRect(875, 425, 130, 47).contains(Mouse::getPosition(window))) {
             window.close();
-          } 
-        } 
+          }
+        }
       }
     
       window.clear();
