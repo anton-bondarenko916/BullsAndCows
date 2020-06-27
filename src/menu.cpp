@@ -48,7 +48,7 @@ void menu() {
       window.draw(bgSprite);
       window.draw(buttonPlaySprite);
       window.draw(buttonExitSprite);
-      window.display();
+      window.display()
     }
   }
 }

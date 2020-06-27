@@ -59,7 +59,7 @@ private:
 			  deletingNumber();
 			}
     }
-		input1.setString(fourDigit.str() + "_");
+		input1.setString(fourDigit.str() + "_")
 		number = fourDigit.str();
   }
 };

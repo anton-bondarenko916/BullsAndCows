@@ -44,7 +44,7 @@ void won(RenderWindow &window) {
 		window.draw(bg3Sprite);
 		window.draw(buttonRepeatSprite);
 		window.draw(buttonExitSprite);
-		window.display();
+		window.display()
     
 	}
 }
