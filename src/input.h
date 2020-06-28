@@ -14,8 +14,8 @@ class Input {
 public:
   Input(int size, Color color) {
     input1.setCharacterSize(size);
-	  input1.setFillColor(color);
-	  input1.setString("_");
+    input1.setFillColor(color);
+    input1.setString("_");
   }
 	    
   void setFont(Font &fonts) { input1.setFont(fonts); }
@@ -24,15 +24,15 @@ public:
 		   
   void output(RenderWindow &window) { window.draw(input1); }
 		    
-	void enteringNumber(Event input) {
+  void enteringNumber(Event input) {
     int enteredNumber = input.text.unicode;
-		if ((enteredNumber > 47 && enteredNumber < 58) || enteredNumber == 8) {
-		  count = fourDigit.str().length();
-		  if (count <= clamp) {
-			  enteringLogic(enteredNumber);
-			} else if (count > clamp && enteredNumber == 8) {
-				deletingNumber();
-			}
+    if ((enteredNumber > 47 && enteredNumber < 58) || enteredNumber == 8) {
+      count = fourDigit.str().length();
+      if (count <= clamp) {
+        enteringLogic(enteredNumber);
+      } else if (count > clamp && enteredNumber == 8) {
+        deletingNumber();
+          }
     }
   }
 	    
@@ -40,34 +40,34 @@ public:
 	    
 private:
   Text input1;
-	ostringstream fourDigit;
-	int clamp = 3;
-	string number;
-	int count = 0;
-	int countCurrent = 0;
+  ostringstream fourDigit;
+  int clamp = 3;
+  string number;
+  int count = 0;
+  int countCurrent = 0;
 
-	void deletingNumber() {
-	  string currentText = fourDigit.str();
-	  string newText = "";
-	  countCurrent = currentText.length() - 1;
-	  for (int i = 0; i < countCurrent; i++) {
-		  newText += currentText[i];
-		}
-		fourDigit.str("");
-		fourDigit << newText;
-		input1.setString(fourDigit.str() + "_");
+  void deletingNumber() {
+    string currentText = fourDigit.str();
+    string newText = "";
+    countCurrent = currentText.length() - 1;
+    for (int i = 0; i < countCurrent; i++) {
+      newText += currentText[i];
+    }
+    fourDigit.str("");
+    fourDigit << newText;
+    input1.setString(fourDigit.str() + "_");
   }
 
   void enteringLogic(int enteredNumber) {
-	  if (enteredNumber != 8) {
-		  fourDigit << static_cast<char>(enteredNumber);
-		} else if (enteredNumber == 8) {
+    if (enteredNumber != 8) {
+      fourDigit << static_cast<char>(enteredNumber);
+    } else if (enteredNumber == 8) {
       if (count > 0) {
-			  deletingNumber();
-			}
+        deletingNumber();
+      }
     }
-		input1.setString(fourDigit.str() + "_");
-		number = fourDigit.str();
+    input1.setString(fourDigit.str() + "_");
+    number = fourDigit.str();
   }
 };
 #endif

@@ -14,7 +14,7 @@ void menu() {
   buttonExit.loadFromFile("../images/buttonexit.png");
 
   Sprite bgSprite(bgTexture), buttonPlaySprite(buttonPlay);
-	Sprite buttonExitSprite(buttonExit);
+  Sprite buttonExitSprite(buttonExit);
   bgSprite.setPosition(0, 0);
   buttonPlaySprite.setPosition(475, 300);
   buttonExitSprite.setPosition(475, 375);

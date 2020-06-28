@@ -1,13 +1,9 @@
 #include "functions.h"
 
-
-
-
-
 int massivEntered[4] = {0, 0, 0, 0}, massivRandom[4] = {0, 0, 0, 0};
 int n = 4, bulls = 0, cows = 0;
 
-void intToArray(int a, int massiv[4]) {   
+void intToArray(int a, int massiv[4]) {
   for (int i = 3; i > -1; i--) {
     massiv[i] = a % 10;
     a /= 10;
@@ -33,7 +29,8 @@ void countCows(int &cows) {
   }
 }
 
-int logic(int number, int randomNumber, int &bulls, int &cows, int &numOfMoves) {   
+int logic(int number, int randomNumber, int &bulls, int &cows,
+          int &numOfMoves) { 
   bulls = 0;
   cows = 0;
   if (number < 1000 || number > 9999) {
@@ -43,11 +40,11 @@ int logic(int number, int randomNumber, int &bulls, int &cows, int &numOfMoves) 
     intToArray(randomNumber, massivRandom);
     countBulls(bulls);
     countCows(cows);
-    numOfMoves++; 
+    numOfMoves++;
     if (bulls == 4) {
       return 2;
     } else {
       return 0;
     }
-    }
+  }
 }
