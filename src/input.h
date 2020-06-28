@@ -12,9 +12,9 @@ using namespace sf;
 class Input {
 
 public:
-  Input(int size, Color color) {
+  Input(int size) {
     input1.setCharacterSize(size);
-    input1.setFillColor(color);
+    input1.setColor(Color::Black);
     input1.setString("_");
   }
 

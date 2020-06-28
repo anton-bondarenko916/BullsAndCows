@@ -64,7 +64,7 @@ void gameMenu(RenderWindow &window) {
   text.setStyle(Text::Bold);
   text.setPosition(500, 200);
 
-  Input input1(24, Color::Black);
+  Input input1(24);
   input1.setFont(arial);
   input1.setPosition({510, 55});
 
