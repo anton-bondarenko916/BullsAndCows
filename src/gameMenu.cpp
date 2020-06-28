@@ -32,35 +32,35 @@ void gameMenu(RenderWindow &window) {
   Text enteredText("Entered number: ", arial, 30);
   Text numberOfBullsText("0", arial, 48), numberOfCowsText("0", arial, 48);
 
-  numberOfCowsText.setColor(Color::Black);
+  numberOfCowsText.setFillColor(Color::Black);
   numberOfCowsText.setPosition(940, 175);
   numberOfCowsText.setStyle(Text::Bold);
 
-  numberOfBullsText.setColor(Color::Black);
+  numberOfBullsText.setFillColor(Color::Black);
   numberOfBullsText.setPosition(50, 175);
   numberOfBullsText.setStyle(Text::Bold);
 
-  enteredText.setColor(Color::Black);
+  enteredText.setFillColor(Color::Black);
   enteredText.setPosition(435, 150);
   enteredText.setStyle(Text::Bold);
 
-  cowsText.setColor(Color::Black);
+  cowsText.setFillColor(Color::Black);
   cowsText.setPosition(900, 125);
   cowsText.setStyle(Text::Bold);
 
-  bullsText.setColor(Color::Black);
+  bullsText.setFillColor(Color::Black);
   bullsText.setPosition(10, 125);
   bullsText.setStyle(Text::Bold);
 
-  enterText.setColor(Color::Black);
+  enterText.setFillColor(Color::Black);
   enterText.setPosition(425, 0);
   enterText.setStyle(Text::Bold);
 
-  text1.setColor(Color::Black);
+  text1.setFillColor(Color::Black);
   text1.setPosition(450, 450);
   text1.setStyle(Text::Bold);
 
-  text.setColor(Color::Black);
+  text.setFillColor(Color::Black);
   text.setStyle(Text::Bold);
   text.setPosition(500, 200);
 
