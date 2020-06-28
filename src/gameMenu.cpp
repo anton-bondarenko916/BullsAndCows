@@ -1,5 +1,11 @@
 #include "functions.h"
 
+int N = 0;
+
+void toInt(string a) {
+  N = 0;
+  N = atoi(a.c_str());
+}
 
 void gameMenu(RenderWindow &window) {
   string enter;
@@ -88,7 +94,8 @@ void gameMenu(RenderWindow &window) {
             result = 0;
             input1.outputText(enter);
             text.setString(enter);
-            number = toInt(enter);
+            toInt(enter);
+            number = N;
             result = logic(number, randomNumber, bulls, cows, numOfMoves);
             switch (result) {
             case 0:

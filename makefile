@@ -2,7 +2,9 @@ CC=g++
 
 CPPFLAGS=-c -Wall -Wextra -Werror
 
-OBJ=createRandomNumber.o gameMenu.o logic.o main.o menu.o stringToInt.o won.o
+OBJ=createRandomNumber.o gameMenu.o logic.o main.o menu.o won.o
+
+
 
 SRC=./src
 
@@ -12,7 +14,7 @@ TEST=./test
 
 all : PROG clean
 
-PROG : createRandomNumber gameMenu logic main menu stringToInt won BullsAndCows clean
+PROG : createRandomNumber gameMenu logic main menu won BullsAndCows clean
 
 createRandomNumber :
 	$(CC) $(CPPFLAGS) $(SRC)/createRandomNumber.cpp
@@ -28,15 +30,29 @@ main :
 	
 menu :
 	$(CC) $(CPPFLAGS) $(SRC)/menu.cpp
-	
-stringToInt :
-	$(CC) $(CPPFLAGS) $(SRC)/stringToInt.cpp
-	
+
 won :
 	$(CC) $(CPPFLAGS) $(SRC)/won.cpp
 	
 BullsAndCows :
 	$(CC) $(OBJ) -o $(BIN)/bullsandcows -lsfml-graphics -lsfml-window -lsfml-system
 
+Test :
+	$(CC) --std=c++11 -c $(TEST)/unittest.cpp
+	$(CC) unittest.o -o $(BIN)/test
+	rm -rf *.o
+	
 clean :
 	rm -rf *.o
+
+
+
+
+
+
+
+
+
+
+
+
