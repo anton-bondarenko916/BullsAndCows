@@ -1,3 +1,6 @@
+#ifndef __INPUT_H__
+#define __INPUT_H__
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <sstream>
@@ -67,3 +70,4 @@ private:
 		number = fourDigit.str();
   }
 };
+#endif
