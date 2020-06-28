@@ -1,10 +1,8 @@
 CC=g++
 
-CPPFLAGS=-c -Wall -Wextra -Werror
+CPPFLAGS=-c -Wall -Wextra -Werror -std=c++11
 
 OBJ=createRandomNumber.o gameMenu.o logic.o main.o menu.o won.o
-
-
 
 SRC=./src
 
