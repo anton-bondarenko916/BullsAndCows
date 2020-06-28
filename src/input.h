@@ -32,7 +32,7 @@ public:
         enteringLogic(enteredNumber);
       } else if (count > clamp && enteredNumber == 8) {
         deletingNumber();
-          }
+      }
     }
   }
 	    

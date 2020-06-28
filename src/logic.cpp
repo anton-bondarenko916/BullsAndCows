@@ -30,7 +30,7 @@ void countCows(int &cows) {
 }
 
 int logic(int number, int randomNumber, int &bulls, int &cows,
-          int &numOfMoves) { 
+          int &numOfMoves) {
   bulls = 0;
   cows = 0;
   if (number < 1000 || number > 9999) {

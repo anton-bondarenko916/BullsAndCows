@@ -28,17 +28,17 @@ void won(RenderWindow &window) {
     while (window.pollEvent(event)) {
       if (event.type == Event::Closed) {
         window.close();
-      } 
+      }
       if (event.type == Event::MouseButtonReleased) {
         if (event.mouseButton.button == Mouse::Left) {
           if (IntRect(485, 250, 130, 47).contains(Mouse::getPosition(window))) {
-            gameMenu(window);                         
-          } 
+            gameMenu(window);
+          }
           if (IntRect(485, 310, 130, 47).contains(Mouse::getPosition(window))) {
             window.close();
-          } 
-        } 
-      }      
+          }
+        }
+      }
     }
     window.clear();
     window.draw(bg3Sprite);
