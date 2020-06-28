@@ -71,16 +71,16 @@ TEST(TestCreate, Test){
 
 TEST(TestToInt, Test1){
 	a = "1234";
-	input = 1234;
+	number = 1234;
 	result = toInt(a);
-	ASSERT_EQ(input, result);
+	ASSERT_EQ(number, result);
 }
 
 TEST(TestToInt, Test2){
 	a = "asddc";
-	input = 0;
+	number = 0;
 	result = toInt(a);
-	ASSERT_EQ(input, result);
+	ASSERT_EQ(number, result);
 }
 
 int test(int argc, char **argv) {

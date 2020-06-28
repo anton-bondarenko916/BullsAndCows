@@ -1,6 +1,6 @@
 CC=g++
 
-CPPFLAGS=-c
+CPPFLAGS=-c -Wall -Wextra -Werror
 
 OBJ=createRandomNumber.o gameMenu.o logic.o main.o menu.o stringToInt.o won.o
 

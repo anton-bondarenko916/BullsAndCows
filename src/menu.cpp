@@ -13,8 +13,8 @@ void menu() {
   buttonPlay.loadFromFile("../images/buttonplay.png");
   buttonExit.loadFromFile("../images/buttonexit.png");
 
-  Sprite bgSprite(bgTexture), buttonPlaySprite(buttonPlay),
-			Sprite buttonExitSprite(buttonExit);
+  Sprite bgSprite(bgTexture), buttonPlaySprite(buttonPlay);
+	Sprite buttonExitSprite(buttonExit);
   bgSprite.setPosition(0, 0);
   buttonPlaySprite.setPosition(475, 300);
   buttonExitSprite.setPosition(475, 375);

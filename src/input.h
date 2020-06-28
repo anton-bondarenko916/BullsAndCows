@@ -24,9 +24,10 @@ public:
 	void enteringNumber(Event input) {
     int enteredNumber = input.text.unicode;
 		if ((enteredNumber > 47 && enteredNumber < 58) || enteredNumber == 8) {
-		  if (fourDigit.str().length() <= clamp) {
+		  count = fourDigit.str().length();
+		  if (count <= clamp) {
 			  enteringLogic(enteredNumber);
-			} else if (fourDigit.str().length() > clamp && enteredNumber == 8) {
+			} else if (count > clamp && enteredNumber == 8) {
 				deletingNumber();
 			}
     }
@@ -39,11 +40,14 @@ private:
 	ostringstream fourDigit;
 	int clamp = 3;
 	string number;
+	int count = 0;
+	int countCurrent = 0;
 
 	void deletingNumber() {
 	  string currentText = fourDigit.str();
 	  string newText = "";
-	  for (int i = 0; i < currentText.length() - 1; i++) {
+	  countCurrent = currentText.length() - 1;
+	  for (int i = 0; i < countCurrent; i++) {
 		  newText += currentText[i];
 		}
 		fourDigit.str("");
@@ -55,7 +59,7 @@ private:
 	  if (enteredNumber != 8) {
 		  fourDigit << static_cast<char>(enteredNumber);
 		} else if (enteredNumber == 8) {
-      if (fourDigit.str().length() > 0) {
+      if (count > 0) {
 			  deletingNumber();
 			}
     }

@@ -2,7 +2,6 @@
 
 
 void gameMenu(RenderWindow &window) {
-  bool pressed = false;
   string enter;
   int number, randomNumber, bulls = 0, cows = 0, numOfMoves = 0, result;
   string bullsString, cowsString;
