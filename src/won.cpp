@@ -1,7 +1,5 @@
 #include "functions.h"
 
-
-
 void won(RenderWindow &window) {
   Texture bg3Texture, buttonRepeatTexture, buttonExitTexture;
   bg3Texture.loadFromFile("../images/fon3.png");
@@ -45,6 +43,5 @@ void won(RenderWindow &window) {
     window.draw(buttonRepeatSprite);
     window.draw(buttonExitSprite);
     window.display();
-
   }
 }

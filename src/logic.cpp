@@ -10,7 +10,6 @@ void intToArray(int a, int massiv[4]) {
   }
 }
 
-
 void countBulls(int &bulls) {
   for (int i = 0; i < 4; i++) {
     if (massivEntered[i] == massivRandom[i]) {

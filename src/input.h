@@ -17,13 +17,13 @@ public:
     input1.setFillColor(color);
     input1.setString("_");
   }
-	    
+
   void setFont(Font &fonts) { input1.setFont(fonts); }
 
   void setPosition(Vector2f point) { input1.setPosition(point); }
-		   
+
   void output(RenderWindow &window) { window.draw(input1); }
-		    
+
   void enteringNumber(Event input) {
     int enteredNumber = input.text.unicode;
     if ((enteredNumber > 47 && enteredNumber < 58) || enteredNumber == 8) {
@@ -35,9 +35,9 @@ public:
       }
     }
   }
-	    
+
   void outputText(string &a) { a = number; }
-	    
+
 private:
   Text input1;
   ostringstream fourDigit;

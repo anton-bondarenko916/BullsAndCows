@@ -3,11 +3,11 @@
 using namespace sf;
 
 void menu() {
-    
+
   RenderWindow window(sf::VideoMode(1024, 500), "Bulls And Cows");
-    
+
   int position = 0;
-    
+
   Texture bgTexture, buttonPlay, buttonExit;
   bgTexture.loadFromFile("../images/fon.jpg");
   buttonPlay.loadFromFile("../images/buttonplay.png");
