@@ -1,56 +1,49 @@
-CC=g++
+.PHONY: clean all test run
+CC = g++
+CPPFLAGS = -c -Wall -Werror -Wextra  -std=c++11
+OBJ = createRandomNumber.o gameMenu.o logic.o main.o menu.o won.o
+SRC = ./src
+BIN = ./bin
+BUILD = ./build
+TEST = ./test
 
-CPPFLAGS=-c -Wall -Wextra -Werror -std=c++11
+all: $(BIN)/bullsandcows
 
-OBJ=createRandomNumber.o gameMenu.o logic.o main.o menu.o won.o
-
-SRC=./src
-
-BIN=./bin
-
-TEST=./test
-
-all : PROG clean
-
-PROG : createRandomNumber gameMenu logic main menu won BullsAndCows clean
-
-createRandomNumber :
-	$(CC) $(CPPFLAGS) $(SRC)/createRandomNumber.cpp
+$(BIN)/bullsandcows: $(BUILD)/createRandomNumber.o $(BUILD)/gameMenu.o $(BUILD)/logic.o $(BUILD)/main.o $(BUILD)/menu.o $(BUILD)/won.o 
+	$(CC) $(BUILD)/createRandomNumber.o $(BUILD)/gameMenu.o $(BUILD)/logic.o $(BUILD)/main.o $(BUILD)/menu.o $(BUILD)/won.o -o $(BIN)/bullsandcows -lsfml-graphics -lsfml-window -lsfml-system
 	
-gameMenu :
-	$(CC) $(CPPFLAGS) $(SRC)/gameMenu.cpp
+test: $(TEST)/unittest.cpp $(BUILD)/createRandomNumber.o $(BUILD)/logic.o
+	g++ -o $(BIN)/testing $(TEST)/unittest.cpp $(BUILD)/createRandomNumber.o $(BUILD)/logic.o
 	
-logic :
-	$(CC) $(CPPFLAGS) $(SRC)/logic.cpp
-
-main :
-	$(CC) $(CPPFLAGS) $(SRC)/main.cpp
+$(BUILD)/createRandomNumber.o: $(SRC)/createRandomNumber.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/createRandomNumber.cpp -o $(BUILD)/createRandomNumber.o
 	
-menu :
-	$(CC) $(CPPFLAGS) $(SRC)/menu.cpp
-
-won :
-	$(CC) $(CPPFLAGS) $(SRC)/won.cpp
+$(BUILD)/gameMenu.o: $(SRC)/gameMenu.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/gameMenu.cpp -o $(BUILD)/gameMenu.o
 	
-BullsAndCows :
-	$(CC) $(OBJ) -o $(BIN)/bullsandcows -lsfml-graphics -lsfml-window -lsfml-system
+$(BUILD)/logic.o: $(SRC)/logic.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/logic.cpp -o $(BUILD)/logic.o
 
-Test :
-	$(CC) --std=c++11 -c $(TEST)/unittest.cpp
-	$(CC) unittest.o -o $(BIN)/test
-	rm -rf *.o
+$(BUILD)/main.o: $(SRC)/main.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/main.cpp -o $(BUILD)/main.o
 	
-clean :
-	rm -rf *.o
+$(BUILD)/menu.o: $(SRC)/menu.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/menu.cpp -o $(BUILD)/menu.o
+
+$(BUILD)/won.o: $(SRC)/won.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/won.cpp -o $(BUILD)/won.o
+	
 
 
 
-
-
-
-
-
-
-
-
+clean:
+	@rm -f build/*.o
+	@rm -f bin/bullsandcows
+	@rm -f bin/testing
+	
+run:
+	@./bin/bullsandcows
+	
+runtest:
+	./bin/testing
 

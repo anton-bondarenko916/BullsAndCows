@@ -9,9 +9,9 @@ void menu() {
   int position = 0;
 
   Texture bgTexture, buttonPlay, buttonExit;
-  bgTexture.loadFromFile("../images/fon.jpg");
-  buttonPlay.loadFromFile("../images/buttonplay.png");
-  buttonExit.loadFromFile("../images/buttonexit.png");
+  bgTexture.loadFromFile("images/fon.jpg");
+  buttonPlay.loadFromFile("images/buttonplay.png");
+  buttonExit.loadFromFile("images/buttonexit.png");
 
   Sprite bgSprite(bgTexture), buttonPlaySprite(buttonPlay);
   Sprite buttonExitSprite(buttonExit);

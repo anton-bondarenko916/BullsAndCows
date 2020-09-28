@@ -8,13 +8,14 @@
 #include <sstream>
 #include <stdlib.h>
 #include <string>
+#include <fstream>
 
 using namespace std;
 using namespace sf;
 
-int main();
+//int main();
 int logic(int number, int randomNumber, int &bulls, int &cows, int &numOfMoves);
-int create();
 void menu();
+int create();
 void gameMenu(RenderWindow &window);
 void won(RenderWindow &window);
