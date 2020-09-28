@@ -8,7 +8,6 @@ int create() {
   int createdNumber = 20;
   string number;
 
-
   fin.open(path);
   if (!fin.is_open()) {
     cout << "Error open file" << endl;
