@@ -10,16 +10,12 @@ int create() {
 
 
   fin.open(path);
-  if (!fin.is_open())
-  {
+  if (!fin.is_open()) {
     cout << "Error open file" << endl;
-  }
-  else
-  {
+  } else {
     int i = 0;
-    while(getline(fin, number)){
-      if (i == randomIndex)
-      {
+    while(getline(fin, number)) {
+      if (i == randomIndex) {
         break;
       }
       i++;

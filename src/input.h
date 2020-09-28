@@ -14,7 +14,7 @@ class Input {
 public:
   Input(int size) {
     input1.setCharacterSize(size);
-    input1.setFillColor(Color::Black);
+    input1.setColor(Color::Black);
     input1.setString("_");
   }
 
