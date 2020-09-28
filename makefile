@@ -1,6 +1,6 @@
 .PHONY: clean all test run
 CC = g++
-CPPFLAGS = -c -Wall -Werror -Wextra  -std=c++11
+CPPFLAGS = -c -Wall  -Wextra  -std=c++11
 OBJ = createRandomNumber.o gameMenu.o logic.o main.o menu.o won.o
 SRC = ./src
 BIN = ./bin

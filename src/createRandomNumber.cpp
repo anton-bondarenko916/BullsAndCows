@@ -14,7 +14,7 @@ int create() {
     cout << "Error open file" << endl;
   } else {
     int i = 0;
-    while(getline(fin, number)) {
+    while (getline(fin, number)) {
       if (i == randomIndex) {
         break;
       }
